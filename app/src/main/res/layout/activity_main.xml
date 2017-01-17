@@ -1,85 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:screenOrientation="portrait"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="teste.soma.MainActivity">
 
     <TextView
         android:id="@+id/txt1"
-        android:layout_width="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Digite o primeiro Numero"
-        android:textSize="18sp"
         android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:textAllCaps="true" />
+        android:textSize="24sp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:inputType="text|number|numberSigned|numberDecimal"
         android:ems="10"
         android:id="@+id/num1"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:textAlignment="center" />
+        tools:inputType="text|number|numberSigned|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:textAllCaps="true" />
     <TextView
         android:id="@+id/txt2"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Digite o Segundo Numero"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:textAllCaps="true" />
+        android:textColor="@color/colorPrimary" />
     <EditText
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:inputType="text|number|numberSigned|numberDecimal"
         android:ems="10"
         android:id="@+id/num2"
+        android:textAlignment="center"
+        android:elegantTextHeight="false"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
+    <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/btnsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAlignment="center" />
-
-    <Button
-        android:text="Somar"
-        android:layout_height="wrap_content"
         android:id="@+id/btnsum"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"/>
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
     <Button
-        android:text="Multiplicar"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnmul"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/btnsub"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"/>
-    <Button
-        android:text="Subtrair"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:id="@+id/btnsub"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"/>
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
     <Button
-        android:text="Dividir"
-        android:layout_height="wrap_content"
-        android:id="@+id/btndiv"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/btnmul"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"/>
-
-
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btnmul"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
+    <Button
+        android:layout_marginTop="10dp"
+        android:text="@string/btndiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btndiv"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:elevation="0dp"
+        android:textAlignment="center" />
+        </LinearLayout>
+    <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:weightSum="1">
+
         <TextView
             android:text="Resultado:"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Result"
-            android:textSize="18sp"
-            android:textStyle="normal|bold" />
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/background_dark" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -88,7 +135,25 @@
             android:text=""
             android:ems="10"
             android:id="@+id/txtres"
-            android:layout_weight="1" />
+            android:background="@android:color/transparent"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_dark" />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_gravity="center"
+        >
+    <TextView
+        android:text="@string/Developer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:textColorLink="?attr/colorPrimary"
+        />
+        </LinearLayout>
 </LinearLayout>
